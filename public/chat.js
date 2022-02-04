@@ -1,5 +1,6 @@
-
-const socket = io('http://192.168.0.14:3000')
+const room = window.location.pathname.replaceAll('/','')
+console.log(room)
+const socket = io(`http://192.168.0.14:3000/${room}`)
 
 let user = null
 
